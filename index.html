@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Titre de la page</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="./js/nav.js"></script>
+		<script type="./js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<nav class="topnav" id="myTopnav">
+			<a href="index.html" class="active">Home</a>
+			<div class="dropdown">
+				<button class="dropbtn">Prestations<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-content">
+					<a href="etude.html">Etude</a>
+					<a href="developpement.html">Développement</a>
+				</div>
+			</div>
+			<a href="realisation.html">Réalisation</a>
+			<a href="#about" data-toggle="modal" data-target="#ModalContact">Contact</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+		</nav>
+		<main>
+			<div class="modal fade" id="ModalContact" tabindex="-1" role="dialog" aria-labelledby="ModalContact" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="ModalContact">
+								<div class="container">
+								      Contact
+								</div>
+							</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<form action="contact.php">
+								<label for="fname">First Name</label>
+								<input type="text" id="fname" name="firstname" placeholder="Your name..">
+								<label for="lname">Last Name</label>
+								<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+								<label for="email">Email</label>
+							  <input type="text" name="email" id="email" placeholder="Email">
+								<label for="subject">Subject</label>
+								<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+								<input type="submit" value="Submit">
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<article class="contenu"></article>
+		</main>
+		<footer>
+			<h1>fg-systemes.fr</h1>
+		</footer>
+	</body>
+</html>
